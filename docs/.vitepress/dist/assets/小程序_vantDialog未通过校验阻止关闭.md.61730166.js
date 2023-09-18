@@ -1,0 +1,101 @@
+import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.b637c96f.js";const p="/小程序/vantDialog未通过校验阻止关闭.gif",d=JSON.parse('{"title":"vantDialog未通过校验阻止关闭","description":"","frontmatter":{"title":"vantDialog未通过校验阻止关闭"},"headers":[],"relativePath":"小程序/vantDialog未通过校验阻止关闭.md","filePath":"小程序/vantDialog未通过校验阻止关闭.md","lastUpdated":1694660988000}'),o={name:"小程序/vantDialog未通过校验阻止关闭.md"},e=l('<h1 id="vantdialog未通过校验阻止关闭" tabindex="-1">vantDialog未通过校验阻止关闭 <a class="header-anchor" href="#vantdialog未通过校验阻止关闭" aria-label="Permalink to &quot;vantDialog未通过校验阻止关闭&quot;">​</a></h1><p><img src="'+p+`" alt="" data-fancybox="gallery"></p><div class="language-html vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">html</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#E1E4E8;">&lt;</span><span style="color:#85E89D;">van-dialog</span></span>
+<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#B392F0;">use-slot</span></span>
+<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#B392F0;">title</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;星 级 评 定&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#B392F0;">show</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;{{ dialogVisible }}&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#B392F0;">show-cancel-button</span></span>
+<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#B392F0;">confirm-button-open-type</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;getUserInfo&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#B392F0;">bind:close</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;onClose&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#B392F0;">custom-style</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;border-radius: 15rpx&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#B392F0;">confirm-button-color</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;#1dab71&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#B392F0;">before-close</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;{{beforeClose}}&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">  &gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">    &lt;</span><span style="color:#FDAEB7;font-style:italic;">view</span><span style="color:#E1E4E8;"> </span><span style="color:#B392F0;">class</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;dialogRate&quot;</span><span style="color:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">      &lt;</span><span style="color:#85E89D;">van-rate</span></span>
+<span class="line"><span style="color:#E1E4E8;">        </span><span style="color:#B392F0;">value</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;{{rateValue}}&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">        </span><span style="color:#B392F0;">size</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;{{25}}&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">        </span><span style="color:#B392F0;">count</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;{{10}}&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">        </span><span style="color:#B392F0;">color</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;#ffd21e&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">        </span><span style="color:#B392F0;">void-icon</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;star&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">        </span><span style="color:#B392F0;">void-color</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;#eee&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">        </span><span style="color:#B392F0;">bind:change</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;onChangeRate&quot;</span></span>
+<span class="line"><span style="color:#E1E4E8;">      /&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">      &lt;</span><span style="color:#FDAEB7;font-style:italic;">view</span><span style="color:#E1E4E8;"> </span><span style="color:#B392F0;">class</span><span style="color:#E1E4E8;">=</span><span style="color:#9ECBFF;">&quot;rateNum&quot;</span><span style="color:#E1E4E8;">&gt;星级评定：{{rateValue}}星&lt;/</span><span style="color:#FDAEB7;font-style:italic;">view</span><span style="color:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">    &lt;/</span><span style="color:#FDAEB7;font-style:italic;">view</span><span style="color:#E1E4E8;">&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8;">  &lt;/</span><span style="color:#85E89D;">van-dialog</span><span style="color:#E1E4E8;">&gt;</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#24292E;">&lt;</span><span style="color:#22863A;">van-dialog</span></span>
+<span class="line"><span style="color:#24292E;">    </span><span style="color:#6F42C1;">use-slot</span></span>
+<span class="line"><span style="color:#24292E;">    </span><span style="color:#6F42C1;">title</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;星 级 评 定&quot;</span></span>
+<span class="line"><span style="color:#24292E;">    </span><span style="color:#6F42C1;">show</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;{{ dialogVisible }}&quot;</span></span>
+<span class="line"><span style="color:#24292E;">    </span><span style="color:#6F42C1;">show-cancel-button</span></span>
+<span class="line"><span style="color:#24292E;">    </span><span style="color:#6F42C1;">confirm-button-open-type</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;getUserInfo&quot;</span></span>
+<span class="line"><span style="color:#24292E;">    </span><span style="color:#6F42C1;">bind:close</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;onClose&quot;</span></span>
+<span class="line"><span style="color:#24292E;">    </span><span style="color:#6F42C1;">custom-style</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;border-radius: 15rpx&quot;</span></span>
+<span class="line"><span style="color:#24292E;">    </span><span style="color:#6F42C1;">confirm-button-color</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;#1dab71&quot;</span></span>
+<span class="line"><span style="color:#24292E;">    </span><span style="color:#6F42C1;">before-close</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;{{beforeClose}}&quot;</span></span>
+<span class="line"><span style="color:#24292E;">  &gt;</span></span>
+<span class="line"><span style="color:#24292E;">    &lt;</span><span style="color:#B31D28;font-style:italic;">view</span><span style="color:#24292E;"> </span><span style="color:#6F42C1;">class</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;dialogRate&quot;</span><span style="color:#24292E;">&gt;</span></span>
+<span class="line"><span style="color:#24292E;">      &lt;</span><span style="color:#22863A;">van-rate</span></span>
+<span class="line"><span style="color:#24292E;">        </span><span style="color:#6F42C1;">value</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;{{rateValue}}&quot;</span></span>
+<span class="line"><span style="color:#24292E;">        </span><span style="color:#6F42C1;">size</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;{{25}}&quot;</span></span>
+<span class="line"><span style="color:#24292E;">        </span><span style="color:#6F42C1;">count</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;{{10}}&quot;</span></span>
+<span class="line"><span style="color:#24292E;">        </span><span style="color:#6F42C1;">color</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;#ffd21e&quot;</span></span>
+<span class="line"><span style="color:#24292E;">        </span><span style="color:#6F42C1;">void-icon</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;star&quot;</span></span>
+<span class="line"><span style="color:#24292E;">        </span><span style="color:#6F42C1;">void-color</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;#eee&quot;</span></span>
+<span class="line"><span style="color:#24292E;">        </span><span style="color:#6F42C1;">bind:change</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;onChangeRate&quot;</span></span>
+<span class="line"><span style="color:#24292E;">      /&gt;</span></span>
+<span class="line"><span style="color:#24292E;">      &lt;</span><span style="color:#B31D28;font-style:italic;">view</span><span style="color:#24292E;"> </span><span style="color:#6F42C1;">class</span><span style="color:#24292E;">=</span><span style="color:#032F62;">&quot;rateNum&quot;</span><span style="color:#24292E;">&gt;星级评定：{{rateValue}}星&lt;/</span><span style="color:#B31D28;font-style:italic;">view</span><span style="color:#24292E;">&gt;</span></span>
+<span class="line"><span style="color:#24292E;">    &lt;/</span><span style="color:#B31D28;font-style:italic;">view</span><span style="color:#24292E;">&gt;</span></span>
+<span class="line"><span style="color:#24292E;">  &lt;/</span><span style="color:#22863A;">van-dialog</span><span style="color:#24292E;">&gt;</span></span></code></pre></div><div class="language-javascript vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">javascript</span><pre class="shiki github-dark vp-code-dark"><code><span class="line"><span style="color:#B392F0;">Page</span><span style="color:#E1E4E8;">({</span></span>
+<span class="line"><span style="color:#E1E4E8;">    data: {</span></span>
+<span class="line"><span style="color:#E1E4E8;">      </span><span style="color:#6A737D;">// 弹框未通过校验阻止关闭</span></span>
+<span class="line"><span style="color:#E1E4E8;">      </span><span style="color:#B392F0;">beforeClose</span><span style="color:#E1E4E8;">(</span><span style="color:#FFAB70;">action</span><span style="color:#E1E4E8;">) {</span></span>
+<span class="line"><span style="color:#E1E4E8;">        </span><span style="color:#F97583;">return</span><span style="color:#E1E4E8;"> </span><span style="color:#F97583;">new</span><span style="color:#E1E4E8;"> </span><span style="color:#79B8FF;">Promise</span><span style="color:#E1E4E8;">((</span><span style="color:#FFAB70;">resolve</span><span style="color:#E1E4E8;">) </span><span style="color:#F97583;">=&gt;</span><span style="color:#E1E4E8;"> {</span></span>
+<span class="line"><span style="color:#E1E4E8;">          </span><span style="color:#F97583;">if</span><span style="color:#E1E4E8;"> (action </span><span style="color:#F97583;">===</span><span style="color:#E1E4E8;"> </span><span style="color:#9ECBFF;">&#39;confirm&#39;</span><span style="color:#E1E4E8;">) {</span></span>
+<span class="line"><span style="color:#E1E4E8;">            </span><span style="color:#F97583;">if</span><span style="color:#E1E4E8;">(</span><span style="color:#79B8FF;">this</span><span style="color:#E1E4E8;">.data.rateValue </span><span style="color:#F97583;">&gt;</span><span style="color:#79B8FF;">0</span><span style="color:#E1E4E8;">){</span></span>
+<span class="line"><span style="color:#E1E4E8;">              </span><span style="color:#79B8FF;">this</span><span style="color:#E1E4E8;">.</span><span style="color:#B392F0;">onSubmitRate</span><span style="color:#E1E4E8;">()</span></span>
+<span class="line"><span style="color:#E1E4E8;">              </span><span style="color:#B392F0;">resolve</span><span style="color:#E1E4E8;">(</span><span style="color:#79B8FF;">true</span><span style="color:#E1E4E8;">);</span></span>
+<span class="line"><span style="color:#E1E4E8;">            }</span><span style="color:#F97583;">else</span><span style="color:#E1E4E8;"> {</span></span>
+<span class="line"><span style="color:#E1E4E8;">              wx.</span><span style="color:#B392F0;">showToast</span><span style="color:#E1E4E8;">({</span></span>
+<span class="line"><span style="color:#E1E4E8;">                title: </span><span style="color:#9ECBFF;">&#39;请选择星级&#39;</span><span style="color:#E1E4E8;">,</span></span>
+<span class="line"><span style="color:#E1E4E8;">                icon: </span><span style="color:#9ECBFF;">&#39;none&#39;</span></span>
+<span class="line"><span style="color:#E1E4E8;">              })</span></span>
+<span class="line"><span style="color:#E1E4E8;">              </span><span style="color:#B392F0;">resolve</span><span style="color:#E1E4E8;">(</span><span style="color:#79B8FF;">false</span><span style="color:#E1E4E8;">);</span></span>
+<span class="line"><span style="color:#E1E4E8;">            }</span></span>
+<span class="line"><span style="color:#E1E4E8;">          } </span><span style="color:#F97583;">else</span><span style="color:#E1E4E8;"> {</span></span>
+<span class="line"><span style="color:#E1E4E8;">            </span><span style="color:#6A737D;">// 拦截取消操作</span></span>
+<span class="line"><span style="color:#E1E4E8;">            </span><span style="color:#B392F0;">resolve</span><span style="color:#E1E4E8;">(</span><span style="color:#79B8FF;">true</span><span style="color:#E1E4E8;">);</span></span>
+<span class="line"><span style="color:#E1E4E8;">          }</span></span>
+<span class="line"><span style="color:#E1E4E8;">        });</span></span>
+<span class="line"><span style="color:#E1E4E8;">      },</span></span>
+<span class="line"><span style="color:#E1E4E8;">    }</span></span>
+<span class="line"><span style="color:#E1E4E8;">  })</span></span>
+<span class="line"><span style="color:#E1E4E8;">  </span></span>
+<span class="line"><span style="color:#E1E4E8;">  </span><span style="color:#B392F0;">onLoad</span><span style="color:#E1E4E8;">(options) {</span></span>
+<span class="line"><span style="color:#E1E4E8;">    </span><span style="color:#79B8FF;">this</span><span style="color:#E1E4E8;">.</span><span style="color:#B392F0;">setData</span><span style="color:#E1E4E8;">({ beforeClose: </span><span style="color:#79B8FF;">this</span><span style="color:#E1E4E8;">.data.beforeClose.</span><span style="color:#B392F0;">bind</span><span style="color:#E1E4E8;">(</span><span style="color:#79B8FF;">this</span><span style="color:#E1E4E8;">) })</span></span>
+<span class="line"><span style="color:#E1E4E8;">  },</span></span></code></pre><pre class="shiki github-light vp-code-light"><code><span class="line"><span style="color:#6F42C1;">Page</span><span style="color:#24292E;">({</span></span>
+<span class="line"><span style="color:#24292E;">    data: {</span></span>
+<span class="line"><span style="color:#24292E;">      </span><span style="color:#6A737D;">// 弹框未通过校验阻止关闭</span></span>
+<span class="line"><span style="color:#24292E;">      </span><span style="color:#6F42C1;">beforeClose</span><span style="color:#24292E;">(</span><span style="color:#E36209;">action</span><span style="color:#24292E;">) {</span></span>
+<span class="line"><span style="color:#24292E;">        </span><span style="color:#D73A49;">return</span><span style="color:#24292E;"> </span><span style="color:#D73A49;">new</span><span style="color:#24292E;"> </span><span style="color:#005CC5;">Promise</span><span style="color:#24292E;">((</span><span style="color:#E36209;">resolve</span><span style="color:#24292E;">) </span><span style="color:#D73A49;">=&gt;</span><span style="color:#24292E;"> {</span></span>
+<span class="line"><span style="color:#24292E;">          </span><span style="color:#D73A49;">if</span><span style="color:#24292E;"> (action </span><span style="color:#D73A49;">===</span><span style="color:#24292E;"> </span><span style="color:#032F62;">&#39;confirm&#39;</span><span style="color:#24292E;">) {</span></span>
+<span class="line"><span style="color:#24292E;">            </span><span style="color:#D73A49;">if</span><span style="color:#24292E;">(</span><span style="color:#005CC5;">this</span><span style="color:#24292E;">.data.rateValue </span><span style="color:#D73A49;">&gt;</span><span style="color:#005CC5;">0</span><span style="color:#24292E;">){</span></span>
+<span class="line"><span style="color:#24292E;">              </span><span style="color:#005CC5;">this</span><span style="color:#24292E;">.</span><span style="color:#6F42C1;">onSubmitRate</span><span style="color:#24292E;">()</span></span>
+<span class="line"><span style="color:#24292E;">              </span><span style="color:#6F42C1;">resolve</span><span style="color:#24292E;">(</span><span style="color:#005CC5;">true</span><span style="color:#24292E;">);</span></span>
+<span class="line"><span style="color:#24292E;">            }</span><span style="color:#D73A49;">else</span><span style="color:#24292E;"> {</span></span>
+<span class="line"><span style="color:#24292E;">              wx.</span><span style="color:#6F42C1;">showToast</span><span style="color:#24292E;">({</span></span>
+<span class="line"><span style="color:#24292E;">                title: </span><span style="color:#032F62;">&#39;请选择星级&#39;</span><span style="color:#24292E;">,</span></span>
+<span class="line"><span style="color:#24292E;">                icon: </span><span style="color:#032F62;">&#39;none&#39;</span></span>
+<span class="line"><span style="color:#24292E;">              })</span></span>
+<span class="line"><span style="color:#24292E;">              </span><span style="color:#6F42C1;">resolve</span><span style="color:#24292E;">(</span><span style="color:#005CC5;">false</span><span style="color:#24292E;">);</span></span>
+<span class="line"><span style="color:#24292E;">            }</span></span>
+<span class="line"><span style="color:#24292E;">          } </span><span style="color:#D73A49;">else</span><span style="color:#24292E;"> {</span></span>
+<span class="line"><span style="color:#24292E;">            </span><span style="color:#6A737D;">// 拦截取消操作</span></span>
+<span class="line"><span style="color:#24292E;">            </span><span style="color:#6F42C1;">resolve</span><span style="color:#24292E;">(</span><span style="color:#005CC5;">true</span><span style="color:#24292E;">);</span></span>
+<span class="line"><span style="color:#24292E;">          }</span></span>
+<span class="line"><span style="color:#24292E;">        });</span></span>
+<span class="line"><span style="color:#24292E;">      },</span></span>
+<span class="line"><span style="color:#24292E;">    }</span></span>
+<span class="line"><span style="color:#24292E;">  })</span></span>
+<span class="line"><span style="color:#24292E;">  </span></span>
+<span class="line"><span style="color:#24292E;">  </span><span style="color:#6F42C1;">onLoad</span><span style="color:#24292E;">(options) {</span></span>
+<span class="line"><span style="color:#24292E;">    </span><span style="color:#005CC5;">this</span><span style="color:#24292E;">.</span><span style="color:#6F42C1;">setData</span><span style="color:#24292E;">({ beforeClose: </span><span style="color:#005CC5;">this</span><span style="color:#24292E;">.data.beforeClose.</span><span style="color:#6F42C1;">bind</span><span style="color:#24292E;">(</span><span style="color:#005CC5;">this</span><span style="color:#24292E;">) })</span></span>
+<span class="line"><span style="color:#24292E;">  },</span></span></code></pre></div>`,4),t=[e];function c(r,E,y,i,F,u){return n(),a("div",null,t)}const B=s(o,[["render",c]]);export{d as __pageData,B as default};
