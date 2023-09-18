@@ -61,7 +61,7 @@ export default {
 
       footer: {
             message: ' Powered By：<a href="https://ldoc.cc" target="_blank">爱写代码的小白</a>',
-          copyright: `Copyright © ${new Date().getFullYear()} <br><a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-bg.svg" alt="Deploys by Netlify"> </a>`
+          copyright: `Copyright © ${new Date().getFullYear()} <br><center><a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-bg.svg" alt="Deploys by Netlify"> </a></center>`
       },
   },
   markdown:{
