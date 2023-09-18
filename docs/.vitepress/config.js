@@ -60,8 +60,8 @@ export default {
       },
 
       footer: {
-            message: ' ICP备案：<a href="http://www.beian.miit.gov.cn" target="_blank">鲁ICP备202004018号</a>',
-          copyright: `Copyright © ${new Date().getFullYear()} <a href="http://www.itwk.cc" target="_blank">爱写代码的小白<br><a href="http://dev.ldoc.cc" target="_blank">杰信网络对象存储</a> &nbsp; | &nbsp;<a href="https://blog.csdn.net/qq_34185638" target="_blank">CSDN</a>`
+            message: ' Powered By：<a href="https://ldoc.cc" target="_blank">爱写代码的小白</a>',
+          copyright: `Copyright © ${new Date().getFullYear()} <br><a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-bg.svg" alt="Deploys by Netlify"> </a>`
       },
   },
   markdown:{
